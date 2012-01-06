@@ -17,7 +17,7 @@ var charShade = function(val){
 var colorify = function(err, src){
   if (err) throw err;
   img = new Canvas.Image;
-  
+
   img.onload = function(){
     var canvas = new Canvas(img.width, img.height)
       , ctx = canvas.getContext('2d');
@@ -26,7 +26,7 @@ var colorify = function(err, src){
     
     var im = ctx.getImageData(0, 0, canvas.width, canvas.height)
       , d = im.data
-      , sf = im.width / WIDTH * 3
+      , sf = Math.max(im.width / WIDTH * 3, 1)
     
     for (var j =0; j< im.height; j+=parseInt(sf)){  
       for (var i = 0; i< im.width; i+=parseInt(sf)){
