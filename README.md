@@ -9,7 +9,7 @@ easy way to look at it? You need *goggles*.
 
 ## Install ##
 
-You'll need Cairo on your system.
+You'll need [Cairo](https://github.com/LearnBoost/node-canvas/wiki/Installation---OSX) on your system.
 
 Then:
 
