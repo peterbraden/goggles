@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require('fs')
   , Canvas = require('canvas')
   , colors = require('colors')
