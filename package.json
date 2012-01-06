@@ -1,0 +1,24 @@
+{
+    "name":         "goggles",
+    "description":  "Peek at images from the command line",
+    "keywords":     ["tools", "fun", "colors"],
+    "author":       ["Peter Braden <hi@peterbraden.co.uk>"],
+    "version":      "0.0.1",
+
+    "repository": {
+      "type": "git",
+      "url": "http://github.com/peterbraden/goggles.git" 
+    },
+    "engines":      {
+      "node":       ">=0.4.0"
+    },
+    "dependencies": {
+      , "colors": ""
+			, "nomnom": ""
+			, "canvas" : ""
+    },
+    "main" : "./lib/nyam",
+    "bin":          {
+      "yam":       "./lib/cli.js"
+    }
+}
