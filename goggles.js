@@ -1,22 +1,21 @@
 #!/usr/bin/env node
 
-var fs = require('fs')
-  , Canvas = require('canvas')
+var Canvas = require('canvas')
   , colors = require('colors')
-  , opts = require('nomnom').parse()
 
 var chars = [" ", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█", " ".inverse]
 //['.', '_', '=', '!','8','%','&', '#']
 
-var WIDTH = opts.width || 80
 
 var charShade = function(val){
   return chars[parseInt(((val*(val/2))/(256.0*(256/2))) * (chars.length-1))]
 }
 
-var colorify = function(err, src){
+var colorify = function(err, src, width){
   if (err) throw err;
   img = new Canvas.Image;
+  
+  width = width || 80
 
   img.onload = function(){
     var canvas = new Canvas(img.width, img.height)
@@ -26,7 +25,7 @@ var colorify = function(err, src){
     
     var im = ctx.getImageData(0, 0, canvas.width, canvas.height)
       , d = im.data
-      , sf = Math.max(im.width / WIDTH * 3, 1)
+      , sf = Math.max(im.width / width * 3, 1)
     
     for (var j =0; j< im.height; j+=parseInt(sf)){  
       for (var i = 0; i< im.width; i+=parseInt(sf)){
@@ -53,9 +52,7 @@ var colorify = function(err, src){
 }
 
 
-if (opts[0]){
-  fs.readFile(opts[0], colorify);
-} else {
-   colorify(null, fs.readFileSync('/dev/stdin'))
-} 
+module.exports = function(image, width){
+  return colorify(null, image, width);
+}
 

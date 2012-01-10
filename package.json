@@ -3,7 +3,7 @@
     "description":  "Peek at images from the command line",
     "keywords":     ["tools", "fun", "colors"],
     "author":       ["Peter Braden <hi@peterbraden.co.uk>"],
-    "version":      "0.0.3",
+    "version":      "0.0.4",
 
     "repository": {
       "type": "git",
@@ -17,7 +17,7 @@
 			, "nomnom": ""
 			, "canvas" : ""
     },
-    "main" : "./goggles.js",
+    "main" : "./cli.js",
     "bin":          {
       "goggles":       "./goggles.js"
     }
