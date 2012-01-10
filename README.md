@@ -27,6 +27,14 @@ Then:
 ![](http://github.com/peterbraden/goggles/raw/master/images/mona-out.png)
 
 
+## Programatically ## 
+
+        var fs = require('fs')
+        , goggles = require('goggles')
+
+        goggles(fs.readFileSync('./cat.jpg') , 130)
+
+
 
 ## Boom ##
 
