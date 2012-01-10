@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var opts = require('nomnom').parse()
   , fs = require('fs')
   , goggles = require('./goggles')
