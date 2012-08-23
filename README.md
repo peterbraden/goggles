@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/peterbraden/goggles.png)](http://travis-ci.org/peterbraden/goggles)
 # Goggles #
 Images for the command line
 
